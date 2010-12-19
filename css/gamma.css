@@ -30,61 +30,20 @@
   color: #CCC;
 }
 
-#region-menu {
-  margin: 0;
-  width: 960px;
-  background: #545454;
-  border-radius: 15px 15px 0 0;
-  -moz-border-radius: 15px 15px 0 0;
-  -webkit-border-radius: 15px 15px 0 0;
-	min-height: 36px;
-}
-#region-menu ul.main-menu {
-  text-align: right;
-  border: 0;
-  background: none;
-}
-#region-menu ul.main-menu ul {
-  text-align: left;
-  border: 1px solid #545454;
-  border-top: 0px;
-}
 
-#region-menu ul.main-menu li  {
-  border: 0;
-  font-size: 24px;
-  font-family: 'Adobe Garamond Pro', Georgia, 'Times New Roman', serif;
-}
-#region-menu ul.main-menu li a {
-  padding: 10px 15px;
-  border-color: #545454;
-  color: #454545;
-}
-#region-menu ul.main-menu li li a {
-  padding: 5px 15px;
-}
-#region-menu ul.main-menu li ul li {
-  font-size: 16px;
-}
-#region-menu ul.main-menu > li.last,
-#region-menu ul.main-menu > li.last > a {
-  border-radius: 0 15px 0 0;
-  -moz-border-radius: 0 15px 0 0;
-  -webkit-border-radius: 0 15px 0 0;
-}
-#region-menu ul.main-menu > li > ul,
-#region-menu ul.main-menu > li > ul > li.last,
-#region-menu ul.main-menu > li > ul > li.last a {
-  border-radius: 0 0 10px 10px;
-  -moz-border-radius: 0 0 10px 10px;
-  -webkit-border-radius: 0 0 10px 10px;
-}
+
 
 
 
 /* Primary Navigation & Dropdowns #################################################### */
 
-#gamma-menu-wrapper {
+#region-menu {
+  background: #545454;
+  border-radius: 15px 15px 0 0;
+  -moz-border-radius: 15px 15px 0 0;
+  -webkit-border-radius: 15px 15px 0 0;
+  width: 960px;
+  margin: 0;
 	min-height: 36px;
 }
 /* Main setup for top level menu items */
@@ -111,6 +70,8 @@
   float: none;
 }
 #region-menu ul li ul {
+  border: 1px solid #454545;
+  border-top: 0;
   display: none;
   position: absolute;
   z-index: 5;
@@ -118,6 +79,7 @@
 
 #region-menu ul li ul li ul,
 #region-menu ul li ul li ul li ul {
+  border-top: 1px solid #EEE;
   display: block;
   border: 0;
 }
@@ -157,6 +119,10 @@
 #region-menu ul li ul li ul li ul li:first {
   margin-top: 1px;
 }
+#region-menu ul.links li a {
+  background: none;
+  border: 0;
+}
 #region-menu ul li a {
   display: block;
   padding: 10px 15px;
@@ -165,54 +131,25 @@
 }
 
 #region-menu ul li ul li a {
+  background: #DDD url('../i/bullet-454545.png') no-repeat 6px 50%;
+  color: #454545;
   display: block;
   padding: 8px 4px 8px 32px;
 }
     #region-menu ul li ul li ul li a {
+      background: #DDD url('../i/bullet-454545.png') no-repeat 32px 50%;
       display: block;
       padding: 8px 4px 8px 64px;
     }
     #region-menu ul li ul li ul li ul li a {
+      background: #DDD url('../i/bullet-454545.png') no-repeat 64px 50%;
       text-decoration: none;
       display: block;
       padding: 8px 4px 8px 96px;
     }
-/* End Primary Nav & Dropdowns */
-
-/* Primary Navigation & Dropdowns */
-
-/* Main setup for sub level menu items */
-#region-menu ul li ul,
-#region-menu ul li ul li ul,
-#region-menu ul li ul li ul li ul {
-  background: #EEE;
-}
-#region-menu ul li ul {
-  border: 1px solid #454545;
-  border-top: 0;
-}
-
-#region-menu ul li ul li ul,
-#region-menu ul li ul li ul li ul {
-  border-top: 1px solid #EEE;
-}
-#region-menu ul li ul li a {
-  background: #DDD url('../i/bullet-454545.png') no-repeat 6px 50%;
-  color: #454545;
-}
-    #region-menu ul li ul li ul li a {
-      background: #DDD url('../i/bullet-454545.png') no-repeat 32px 50%;
-    }
-    #region-menu ul li ul li ul li ul li a {
-      background: #DDD url('../i/bullet-454545.png') no-repeat 64px 50%;
-    }
     
-#region-menu ul li ul li a:hover {
-  background-color: #EEE;
-}
-
 #region-menu ul li {
-  background: #8d8c8c;
+  background: #8c8c8c;
 }
 
 #region-menu ul li.active,
@@ -228,3 +165,20 @@
 #region-menu ul li.active-trail a {
   color: #454545;
 }
+
+/* Rounded Top Right Corner of the top level menu items. */
+#region-menu ul > li.last,
+#region-menu ul > li.last > a {
+  border-radius: 0 15px 0 0;
+  -moz-border-radius: 0 15px 0 0;
+  -webkit-border-radius: 0 15px 0 0;
+}
+/* Rounded Bottom Left & Right corners for the last item in a dropdown */
+#region-menu ul > li > ul,
+#region-menu ul > li > ul > li.last,
+#region-menu ul > li > ul > li.last a {
+  border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
+}
+/* End Primary Nav & Dropdowns */
