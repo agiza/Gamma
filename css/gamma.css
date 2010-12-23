@@ -80,7 +80,10 @@
   display: block;
   border: 0;
 }
-
+#region-menu ul.secondary-items li a {
+  min-width: 200px;
+  display: block;
+}
 #region-menu ul.main-menu li ul li a {
   padding: 5px 10px;
 }
