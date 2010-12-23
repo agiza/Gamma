@@ -45,140 +45,83 @@
   width: 960px;
   margin: 0;
 	min-height: 36px;
+	position: relative;
 }
-/* Main setup for top level menu items */
-#region-menu ul {
+#region-menu ul.main-menu {
   font-family: 'Adobe Garamond Pro', Georgia, 'Times New Roman', serif;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  line-height: auto;
+  background: transparent;
+  border: 0;
   float: right;
 }
-/* Main setup for sub level menu items */
-#region-menu ul li ul,
-#region-menu ul li ul li ul,
-#region-menu ul li ul li ul li ul {
-  font-family: Helvetica,Verdana,Arial,sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 14px;
-  overflow: visible;
-  text-align: left;
-  height: 1px;
-  height: auto;
-  float: none;
-}
-#region-menu ul li ul {
-  border: 1px solid #454545;
-  border-top: 0;
-  display: none;
-  position: absolute;
-  z-index: 5;
-}
-
-#region-menu ul li ul li ul,
-#region-menu ul li ul li ul li ul {
-  border-top: 1px solid #EEE;
-  display: block;
-  border: 0;
-}
-/* positioning for sub level menu items */
-#region-menu ul li ul li ul,
-#region-menu ul li ul li ul li ul {
-  position: relative;
-}
-
-#region-menu ul li {
-  display: block;
-  float: left;
-  clear: none;
+#region-menu ul.main-menu li {
   margin-left: 1px;
   font-size: 24px;
   padding: 0;
-  overflow: hidden;
-}
-
-#region-menu ul li ul li,
-#region-menu ul li ul li ul li,
-#region-menu ul li ul li ul li ul li {
-  font-size: 14px;
-  margin: 0;
-  margin-top: 1px;
-  padding: 0;
-  display: block;
-  float: none;
-  clear: both;
-  list-style-type: none;
-  list-style-image: none;
-}
-#region-menu ul li ul li.first {
-  margin-top: 0;
-}
-#region-menu ul li ul li ul li:first,
-#region-menu ul li ul li ul li ul li:first {
-  margin-top: 1px;
-}
-#region-menu ul.links li a {
-  background: none;
-  border: 0;
-}
-#region-menu ul li a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
   position: relative;
 }
-
-#region-menu ul li ul li a {
-  background: #DDD url('../i/bullet-454545.png') no-repeat 6px 50%;
-  color: #454545;
-  display: block;
-  padding: 8px 4px 8px 32px;
+#region-menu ul.main-menu li a {
+  padding: 10px 15px;
+  background: #FFF;
 }
-    #region-menu ul li ul li ul li a {
-      background: #DDD url('../i/bullet-454545.png') no-repeat 32px 50%;
-      display: block;
-      padding: 8px 4px 8px 64px;
-    }
-    #region-menu ul li ul li ul li ul li a {
-      background: #DDD url('../i/bullet-454545.png') no-repeat 64px 50%;
-      text-decoration: none;
-      display: block;
-      padding: 8px 4px 8px 96px;
-    }
-    
-#region-menu ul li {
-  background: #8c8c8c;
-}
-
-#region-menu ul li.active,
-#region-menu ul li.active-trail {
+#region-menu ul.main-menu li a:hover, 
+#region-menu ul.main-menu li.active-trail a, 
+#region-menu ul.main-menu li.active a {
   background: #EEE;
 }
-
-#region-menu ul li a {
-  color: #EEE;
+#region-menu ul.main-menu li ul {
+  border: 1px solid #454545;
+  border-top: 0px;
+  background: #EEE;
+}
+#region-menu ul.main-menu li ul li ul {
+  position: relative;
+  left:0;
+  top:0;
+  display: block;
+  border: 0;
 }
 
-#region-menu ul li.active a,
-#region-menu ul li.active-trail a {
-  color: #454545;
+#region-menu ul.main-menu li ul li a {
+  padding: 5px 10px;
+}
+#region-menu ul.main-menu li ul li ul li a {
+  padding-left: 20px;
+}
+#region-menu ul.main-menu li ul li ul li ul li a {
+  padding-left: 30px;
+}
+#region-menu ul.main-menu li ul li ul li ul li ul li a {
+  padding-left: 40px;
+}
+#region-menu ul.main-menu li ul li ul li ul li ul li ul li a {
+  padding-left: 50px;
+}
+#region-menu ul.main-menu li ul li {
+  font-size: 14px;
+
 }
 
 /* Rounded Top Right Corner of the top level menu items. */
-#region-menu ul > li.last,
-#region-menu ul > li.last > a {
+#region-menu ul.main-menu > li.last,
+#region-menu ul.main-menu > li.last > a {
   border-radius: 0 15px 0 0;
   -moz-border-radius: 0 15px 0 0;
   -webkit-border-radius: 0 15px 0 0;
 }
 /* Rounded Bottom Left & Right corners for the last item in a dropdown */
-#region-menu ul > li > ul,
-#region-menu ul > li > ul > li.last,
-#region-menu ul > li > ul > li.last a {
+#region-menu ul.main-menu > li > ul,
+#region-menu ul.main-menu > li > ul > li.last,
+#region-menu ul.main-menu > li > ul > li.last a {
   border-radius: 0 0 10px 10px;
   -moz-border-radius: 0 0 10px 10px;
   -webkit-border-radius: 0 0 10px 10px;
+}
+/* Remove the rounded corners (in gamma) for the 3rd and futher level menus as they appear "inline" */
+#region-menu ul.main-menu > li > ul > li > ul,
+#region-menu ul.main-menu > li > ul > li > ul > li.last,
+#region-menu ul.main-menu > li > ul > li > ul > li.last a {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
 }
 /* End Primary Nav & Dropdowns */
