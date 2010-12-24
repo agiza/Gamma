@@ -29,6 +29,12 @@
     if (isActive < 1) {
       $('#region-menu li:first').addClass('active-trail');
     }
-
+  
+    /*
+    $("#region-menu ul.main-menu > li ul li.has-subitems > a").click(function(){
+      $(this).next('ul').slideDown('slow');
+      return false;
+    });
+    */
   });
 })(jQuery);

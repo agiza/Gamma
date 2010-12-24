@@ -61,12 +61,12 @@
 }
 #region-menu ul.main-menu li a {
   padding: 10px 15px;
-  background: #FFF;
+  background-color: #FFF;
 }
 #region-menu ul.main-menu li a:hover, 
 #region-menu ul.main-menu li.active-trail a, 
 #region-menu ul.main-menu li.active a {
-  background: #EEE;
+  background-color: #EEE;
 }
 #region-menu ul.main-menu li ul {
   border: 1px solid #454545;
@@ -81,27 +81,41 @@
   border: 0;
 }
 #region-menu ul.secondary-items li a {
+  color: #454545;
   min-width: 200px;
   display: block;
+  background-image: url('../i/bullet-454545.png');
+  background-repeat: no-repeat;
+}
+#region-menu ul.secondary-items li.has-subitems > a {
+  /* background-image: url('../i/bullet-open-454545.png'); */
+}
+#region-menu ul.secondary-items li.has-subitems.closed > a {
+  /* background-image: url('../i/bullet-close-454545.png'); */
 }
 #region-menu ul.main-menu li ul li a {
-  padding: 5px 10px;
+  padding: 5px 10px 5px 24px;
+  background-position: 4px 7px;
 }
 #region-menu ul.main-menu li ul li ul li a {
-  padding-left: 20px;
+  padding-left: 48px;
+  background-position: 24px 7px;
 }
 #region-menu ul.main-menu li ul li ul li ul li a {
-  padding-left: 30px;
+  padding-left: 72px;
+  background-position: 48px 7px;
 }
 #region-menu ul.main-menu li ul li ul li ul li ul li a {
-  padding-left: 40px;
+  padding-left: 96px;
+  background-position: 72px 7px;
 }
 #region-menu ul.main-menu li ul li ul li ul li ul li ul li a {
-  padding-left: 50px;
+  padding-left: 120px;
 }
 #region-menu ul.main-menu li ul li {
-  font-size: 14px;
-
+  font-size: 16px;
+  display: block;
+  clear: both;
 }
 
 /* Rounded Top Right Corner of the top level menu items. */
