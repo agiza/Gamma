@@ -13,14 +13,16 @@
   
   <div id="zones-content">
     <div id="zones-content-inner" class="clearfix">
-      <?php print $content_zone; ?>
-      <?php if (isset($messages)): ?>
-      <div id="message-container" class="container-<?php print $default_container_width; ?> clearfix">
-        <div class="grid-<?php print $default_container_width; ?>">
-          <?php print $messages; ?>
-        </div>
-      </div><!-- /.container-xx -->
-      <?php endif; ?>
+      <div id="zones-content-background" class="clearfix">
+        <?php if (isset($messages)): ?>
+        <div id="message-container" class="container-<?php print $default_container_width; ?> clearfix">
+          <div class="grid-<?php print $default_container_width; ?>">
+            <?php print $messages; ?>
+          </div>
+        </div><!-- /.container-xx -->
+        <?php endif; ?>
+        <?php print $content_zone; ?>
+      </div>
     </div>
   </div>
   

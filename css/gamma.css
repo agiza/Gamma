@@ -14,11 +14,19 @@
 #zones-content {
   background: transparent url('../i/body-bottom-bg-454545.png') repeat-x bottom left;
 }
-#content-container {
+
+
+#zones-content-background {
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px 0;
   background: #EEE;
   border-radius: 0 0 15px 15px;
   -moz-border-radius: 0 0 15px 15px;
   -webkit-border-radius: 0 0 15px 15px;
+}
+#location-container {
+  background: #EEE;
 }
 #zones-below {
   background: #454545;
@@ -61,17 +69,21 @@
 }
 #region-menu ul.main-menu li a {
   padding: 10px 15px;
-  background-color: #FFF;
+  background-color: #8D8C8C;
+  color: #EEE;
+  border: 0;
 }
 #region-menu ul.main-menu li a:hover, 
+#region-menu ul.main-menu li.hover a, 
 #region-menu ul.main-menu li.active-trail a, 
 #region-menu ul.main-menu li.active a {
-  background-color: #EEE;
+  background-color: #DDD;
+  color: #454545;
 }
 #region-menu ul.main-menu li ul {
   border: 1px solid #454545;
   border-top: 0px;
-  background: #EEE;
+  background: #454545;
 }
 #region-menu ul.main-menu li ul li ul {
   position: relative;
@@ -80,12 +92,23 @@
   display: block;
   border: 0;
 }
+#region-menu ul.secondary-items li {
+  margin-left: 0;
+}
+#region-menu ul.secondary-items li a {
+  margin-left: 0;
+  border-bottom: 1px solid #EEE;
+}
 #region-menu ul.secondary-items li a {
   color: #454545;
+  background: #DDD;
   min-width: 200px;
   display: block;
   background-image: url('../i/bullet-454545.png');
   background-repeat: no-repeat;
+}
+#region-menu ul.secondary-items li a:hover {
+  background-color: #EEE;
 }
 #region-menu ul.secondary-items li.has-subitems > a {
   /* background-image: url('../i/bullet-open-454545.png'); */
@@ -95,22 +118,27 @@
 }
 #region-menu ul.main-menu li ul li a {
   padding: 5px 10px 5px 24px;
-  background-position: 4px 7px;
+  background-position: 4px 8px;
 }
 #region-menu ul.main-menu li ul li ul li a {
   padding-left: 48px;
-  background-position: 24px 7px;
+  background-position: 24px 8px;
 }
 #region-menu ul.main-menu li ul li ul li ul li a {
   padding-left: 72px;
-  background-position: 48px 7px;
+  background-position: 48px 8px;
 }
 #region-menu ul.main-menu li ul li ul li ul li ul li a {
   padding-left: 96px;
-  background-position: 72px 7px;
+  background-position: 72px 8px;
 }
 #region-menu ul.main-menu li ul li ul li ul li ul li ul li a {
   padding-left: 120px;
+  background-position: 96px 8px;
+}
+#region-menu ul.main-menu li ul li ul li ul li ul li ul li ul li a {
+  padding-left: 144px;
+  background-position: 120px 8px;
 }
 #region-menu ul.main-menu li ul li {
   font-size: 16px;
@@ -142,3 +170,462 @@
   -webkit-border-radius: 0;
 }
 /* End Primary Nav & Dropdowns */
+
+/* Add rounded corners to default node/comment links */
+div.links ul.links li a {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+
+
+
+
+/* Menu Blocks #################################################### */
+/* Main Content Area menu blocks/lists */
+.menu-block .item-list ul li {
+  display: block;
+}
+.menu-block ul.menu,
+.menu-block div.item-list ul {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+.menu-block ul.menu li,
+.menu-block div.item-list ul li {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  margin-top: 1px;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+
+.menu-block ul.menu li a,
+.menu-block div.item-list ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 8px 4px 8px 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.more-link {
+  text-transform: lowercase;
+}
+.menu-block .more-link a {
+  text-decoration: none;
+  display: block;
+  width: auto;
+  padding: 2px 4px;
+  margin-top: 1px;
+}
+  .menu-block ul.menu li ul li a,
+  .menu-block div.item-list ul li ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 4px 8px 64px;
+  }
+    .menu-block ul.menu li ul li ul li a,
+    .menu-block div.item-list ul li ul li ul li a {
+      text-decoration: none;
+      display: block;
+      padding: 8px 4px 8px 96px;
+    }
+
+/* Custom Link colors for "menu blocks" */
+.menu-block a:link, 
+.menu-block a:visited {
+  color: #545454;
+}
+
+.menu-block a:hover {
+  color: #454545;
+}
+
+.menu-block a:active, 
+.menu-block a.active {
+  color: #545454;
+}
+
+/* Main Content Area menu blocks/lists */
+.menu-block ul.menu li a,
+.menu-block div.item-list ul li a {
+  background: #DDD url('../i/bullet-454545.png') no-repeat 6px 8px;
+}
+.menu-block .more-link a {
+  background: #DDD;
+}
+.menu-block .more-link a:hover {
+  background: #EEE;
+}
+  .menu-block ul.menu li ul li a,
+  .menu-block div.item-list ul li ul li a {
+    background: #DDD url('../i/bullet-454545.png') no-repeat 32px 8px;
+  }
+    .menu-block ul.menu li ul li ul li a,
+    .menu-block div.item-list ul li ul li ul li a {
+      background: #DDD url('../i/bullet-454545.png') no-repeat 64px 8px;
+    }
+    .menu-block ul.menu li a:hover,
+    .menu-block div.item-list ul li a:hover {
+      background-color: #EEE;
+    }
+
+
+/* Footer Region menu blocks/lists */
+#gamma-footer-wrapper .menu-block ul.menu,
+#gamma-footer-wrapper .menu-block div.item-list ul {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+#gamma-footer-wrapper .menu-block ul.menu li,
+#gamma-footer-wrapper .menu-block div.item-list ul li {
+  margin: 0;
+  padding: 0;
+  margin-top: 1px;
+  list-style-type: none;
+  list-style-image: none;
+}
+#gamma-footer-wrapper .menu-block ul.menu li a,
+#gamma-footer-wrapper .menu-block div.item-list ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 8px 4px 8px 32px;
+}
+#gamma-footer-wrapper .menu-block .more-link a {
+  text-decoration: none;
+  display: block;
+  padding: 2px 4px;
+}
+  #gamma-footer-wrapper .menu-block ul.menu li ul li a,
+  #gamma-footer-wrapper .menu-block div.item-list ul li ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 4px 8px 64px;
+  }
+    #gamma-footer-wrapper .menu-block ul.menu li ul li ul li a,
+    #gamma-footer-wrapper .menu-block div.item-list ul li ul li ul li a {
+      text-decoration: none;
+      display: block;
+      padding: 8px 4px 8px 96px;
+    }
+
+
+/* Footer Region menu blocks/lists */
+#gamma-footer-wrapper .menu-block ul.menu li a,
+#gamma-footer-wrapper .menu-block div.item-list ul li a {
+  color: #EEE;
+  background: #5c5c5c url('../i/bullet-DDD.png') no-repeat 6px 8px;
+}
+#gamma-footer-wrapper .more-link a {
+	color: #EEE;
+}
+#gamma-footer-wrapper .menu-block .more-link a {
+	color: #EEE;
+  background: #5c5c5c;
+}
+#gamma-footer-wrapper .menu-block .more-link a:hover {
+  background: #545454;
+}
+  #gamma-footer-wrapper .menu-block ul.menu li ul li a,
+  #gamma-footer-wrapper .menu-block div.item-list ul li ul li a {
+    background: #5c5c5c url('../i/bullet-DDD.png') no-repeat 32px 8px;
+  }
+    #gamma-footer-wrapper .menu-block ul.menu li ul li ul li a,
+    #gamma-footer-wrapper .menu-block div.item-list ul li ul li ul li a {
+      background: #5c5c5c url('../i/bullet-DDD.png') no-repeat 64px 8px;
+    }
+#gamma-footer-wrapper .menu-block ul.menu li a:hover,
+#gamma-footer-wrapper .menu-block div.item-list ul li a:hover {
+  background-color: #545454;
+}
+
+#postscript-wrapper .block .content {
+  background: #EEE;
+  padding: 10px;
+}
+#postscript-wrapper .menu-block .content {
+  background: transparent;
+  padding: 0;
+}
+
+/* Fix for user bar menus... */
+#user-container .menu-block ul.menu li,
+#user-container .menu-block div.item-list ul li {
+  margin-top: 0;
+}
+#user-container .menu-block ul.menu li a,
+#user-container .menu-block div.item-list ul li a {
+  text-decoration: none;
+  display: inline-block;
+  background: none;
+  padding: 4px 5px;
+}
+#user-container .menu-block ul.menu li a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* Rounded Top left & Right for block headers. */
+.block h2 {
+  border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+  min-height: 36px;
+  font-size: 18px;
+  padding: 6px 12px;
+  padding-bottom: 0;
+}
+.block h2 {
+  background: #454545;
+  color: #EEE;
+}
+
+#gamma-footer-wrapper .block h2 {
+  background: #DDD;
+  color: #454545;
+}
+.node h2,
+.block-omega-tools h2 {
+  background: transparent;
+  color: #454545;
+  padding: 0;
+}
+.node h2.node-title {
+  font-size: 32px;
+  font-weight: normal;
+}
+.node h2.node-title a {
+  text-decoration: none;
+}
+.node .comment-wrapper h2.title {
+  background: #454545;
+  color: #EEE;
+}
+
+.node,
+.content-zone .block {
+  border-bottom: 5px solid #454545;
+  margin-bottom: 10px;
+  clear: both;
+}
+.content-zone #block-system-main {
+  border-bottom: 0;
+}
+
+
+
+/* Node Info Bar */
+
+/* Node INFO */
+.node-info,
+.comment-info {
+  padding: 0;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.user-picture {
+	float: left;
+	clear: none;
+	margin: 0;
+	padding: 0;
+}
+.user-picture img {
+	text-decoration: none;
+	display: block;
+	margin: 0;
+  padding: 0;
+  height: auto;
+  line-height: 0.5em;
+}
+.submitted, 
+.terms {
+	margin: 2px 5px 0 10px;
+}
+
+.copyright {
+  font-size: 11px;
+}
+.copyright p {
+  margin: 0;
+}
+
+/* TERM DISPLAY */
+.field-type-taxonomy-term-reference .field-items {
+	float: none;
+}
+
+.field-label-inline .field-label, 
+.field-label-inline .field-items,
+.node-info .field-label, 
+.node-info .field-items {
+	float: none;
+	display: inline;
+}
+.node-info .field-label {
+  display: none;
+}
+.node-info .field-items {
+	margin-left: 0;
+	text-align: right;
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+.node-info ul.field-items li {
+	padding: 0 5px;
+	display: inline;
+	list-style: none;
+}
+.node-info ul.field-items li.last {
+  border-right: 0;
+}
+
+/** Node Lists */
+.node .content ul li {
+  background-image: url('../i/bullet-454545.png');
+}
+
+/** Node Links */
+#region-content .node div.links ul.links a {
+  border: 1px solid #DDD;
+}
+#region-content .node div.links ul.links a:hover {
+  border: 1px solid #8d8c8c;
+}
+
+
+/* Term Display (node.tpl.php) */
+.node-info .field-items li {
+  border-right: 1px solid #454545;
+}
+.node-info .field-items li.last {
+  border-right: 0;
+}
+
+/* From Code Filter Module */
+div.codeblock {
+  background-color: #DDD;
+  display: block;
+}
+
+
+
+
+
+
+
+blockquote {
+  border: 3px solid #8d8c8c;
+  background: #DDD url('../i/quote-bg.png') no-repeat 5px 5px;
+}
+blockquote {
+	display: block;
+	font-style: italic;
+	font-size: 11px;
+	margin-bottom: 10px;
+	padding: 10px 20px 10px 75px;
+}
+.node blockquote p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+h1,
+h1.page-title
+.node h2,
+.node h2 a {
+  color: #0073ba;
+}
+
+.node h2 a:hover {
+  color: #165d8f;
+}
+.comment h3,
+.comment h3 a {
+  color: #EEE;
+}
+.comment h3 {
+  background: #8d8c8c;
+}
+.comment:hover h3 {
+  background: #454545;
+}
+.comment-by-node-author h3 {
+  background: #0073ba;
+  color: #EEE;
+}
+
+.node-info,
+.comment-info {
+  background: #DDD;
+}
+
+.comment .content {
+  background: #FFF;
+}
+
+.comment h3 a:hover {
+  color: #DDD;
+}
+
+#footer-header h2 {
+  color: #EEE;
+}
+
+#footer-wrapper {
+	color: #DDD;
+}
+
+hr {
+  background: #454545;
+}
+
+
+dl dt {
+  background: #8D8C8C;
+  color: #EEE;
+  border: 1px solid #454545;
+	border-bottom: 0;
+}
+dl dt:hover {
+  background: #454545;
+}
+dl dd {
+  border: 1px solid #454545;
+}
+dl dt a,
+dl dt a:visited,
+dl dt a:link,
+dl dt a:hover {
+  color: #eee;
+}
+
+fieldset {
+  border:1px solid #DDD;
+}

@@ -31,10 +31,22 @@
     }
   
     /*
+    // commented out for now; was working on an alternative method to show the 
+    // secondary/tertiary/etc. menus in a way other than flyouts.
     $("#region-menu ul.main-menu > li ul li.has-subitems > a").click(function(){
       $(this).next('ul').slideDown('slow');
       return false;
     });
     */
+    
+    // make the top level menu item remain in a hover state while on a submenu in the dropdown
+    $('#region-menu ul.main-menu > li ul').hover(function(){
+    // hover in
+    $(this).parent('li').addClass('hover');
+    }, function(){
+    // hover out
+    $(this).parent('li').removeClass('hover');
+    });
+    
   });
 })(jQuery);
