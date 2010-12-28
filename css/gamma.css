@@ -726,3 +726,18 @@ blockquote {
 .node-readmore a {
   font-weight: bold;
 }
+
+#user-container .block-user .item-list a {
+    background: none repeat scroll 0 0 #8D8C8C;
+    border: 1px solid #454545;
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 5px;
+    text-decoration: none;
+}
+#user-container .block-user .item-list a:hover {
+    background: none repeat scroll 0 0 #454545;
+    color: #EEE;
+    border: 1px solid #EEE;
+    
+}
