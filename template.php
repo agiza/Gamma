@@ -23,23 +23,23 @@ function gamma_theme(&$existing, $type, $theme, $path) {
   return $hooks;
 }
 
-function gamma_field__taxonomy_term_reference($variables) {
+function gamma_field__taxonomy_term_reference($vars) {
   $output = '';
-
+  
   // Render the label, if it's not hidden.
-  if (!$variables['label_hidden']) {
-    $output .= '<h3 class="field-label">' . $variables['label'] . ': </h3>';
+  if (!$vars['label_hidden']) {
+    $output .= '<h3 class="field-label">' . $vars['label'] . ': </h3>';
   }
 
   // Render the items.
-  $output .= ($variables['element']['#label_display'] == 'inline') ? '<ul class="links inline taxonomy-terms">' : '<ul class="links taxonomy-terms">';
-  foreach ($variables['items'] as $delta => $item) {
-    $output .= '<li class="taxonomy-term-reference-' . $delta . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</li>';
+  $terms = array();
+  foreach ($vars['items'] as $delta => $item) {
+    $terms[$delta] = drupal_render($item);
   }
-  $output .= '</ul>';
+  $output .= theme('item_list', array('items' => $terms, 'attributes' => array('class' => 'taxonomy-terms')));
 
   // Render the top-level DIV.
-  $output = '<div class="' . $variables['classes'] . (!in_array('clearfix', $variables['classes_array']) ? ' clearfix' : '') . '">' . $output . '</div>';
+  $output = '<div class="' . $vars['classes'] . (!in_array('clearfix', $vars['classes_array']) ? ' clearfix' : '') . '">' . $output . '</div>';
 
   return $output;
 }

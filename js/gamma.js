@@ -1,5 +1,5 @@
 // $Id: $.js,v 1.1.2.3 2010/09/11 15:23:25 himerus Exp $
-// declare the $ variable for jQuery usage in the $ theme.
+
 (function ($) {
   /**
    * @todo   Must fix the interaction between active menu items
@@ -30,15 +30,6 @@
       $('#region-menu li:first').addClass('active-trail');
     }
   
-    /*
-    // commented out for now; was working on an alternative method to show the 
-    // secondary/tertiary/etc. menus in a way other than flyouts.
-    $("#region-menu ul.main-menu > li ul li.has-subitems > a").click(function(){
-      $(this).next('ul').slideDown('slow');
-      return false;
-    });
-    */
-    
     // make the top level menu item remain in a hover state while on a submenu in the dropdown
     $('#region-menu ul.main-menu > li ul').hover(function(){
     // hover in
@@ -47,6 +38,85 @@
     // hover out
     $(this).parent('li').removeClass('hover');
     });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // make the menu sexy
+    $('#region-menu div.main-menu > ul.main-menu > li').hover(
+      // hover in
+      function(){
+          var menu = $('#region-menu div.main-menu > ul.main-menu > li');
+          // find the position of the parent LI in the menu
+          var parentIndex = menu.index(this);
+          
+          // find the number of total items in the menu
+          var totalNum = menu.size();
+          // each dropdown is the width of the next 3 menu items by default
+          // if the menu item is one of the last two, we need to change the way
+          // the width and positioning is calculated.
+          if(totalNum - parentIndex < 3) {
+            var compare1 = totalNum - 1;
+            var compare2 = totalNum - 2;
+            var compare3 = totalNum - 3;
+            var offset = $(this).offset();
+            var offsetReal = $('#region-menu div.main-menu > ul.main-menu > li:eq('+compare3+')').offset();
+            leftOffset = offsetReal.left - offset.left - 1;
+            
+            
+            var item1 = $('#region-menu div.main-menu > ul.main-menu > li:eq('+compare1+')').outerWidth();
+            var item2 = $('#region-menu div.main-menu > ul.main-menu > li:eq('+compare2+')').outerWidth();
+            var item3 = $('#region-menu div.main-menu > ul.main-menu > li:eq('+compare3+')').outerWidth();
+            var menuWidth = item1 + item2 + item3 + 2;
+          }
+          else {
+            // add up this and the next two menu items to get the appropriate width
+            var compare1 = parentIndex;
+            var compare2 = parentIndex + 1;
+            var compare3 = parentIndex + 2;
+            // move the menu over just a tad to line up the outer border
+            leftOffset = -1;
+            
+            var item1 = $('#region-menu div.main-menu > ul.main-menu > li:eq('+compare1+')').outerWidth();
+            var item2 = $('#region-menu div.main-menu > ul.main-menu > li:eq('+compare2+')').outerWidth();
+            var item3 = $('#region-menu div.main-menu > ul.main-menu > li:eq('+compare3+')').outerWidth();
+            var menuWidth = item1 + item2 + item3 + 3;
+          }
+          
+          
+          $(this)
+            //.addClass('isPositioned')
+            .children('ul:eq(0)')
+            .css('width', menuWidth)
+            .css('left', leftOffset)
+            //.slideDown('normal')
+            ;
+          //$(this).children('ul').css('width', menuWidth);
+          $(this).find('ul').css('width', menuWidth);
+      }, 
+      // hover out
+      function(){
+         
+    });
+    
+    
+    
+    
+    
+    
     
   });
 })(jQuery);
