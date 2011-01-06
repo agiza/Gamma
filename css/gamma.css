@@ -558,6 +558,9 @@ div.links ul.links li a {
   margin-bottom: 10px;
   clear: both;
 }
+.content-zone .block-without-title {
+  border-bottom: 0;
+}
 .content-zone #block-system-main {
   border-bottom: 0;
 }

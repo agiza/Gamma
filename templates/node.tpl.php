@@ -97,6 +97,7 @@
   <?php if (!empty($content['links'])): ?>
     <div class="links"><?php print render($content['links']); ?></div>
   <?php endif; ?>
+  <?php if($user_picture || $display_submitted || $terms): ?>
   <div class="clearfix node-info">
     <?php print $user_picture; ?>
     <?php if ($display_submitted):?>
@@ -106,6 +107,7 @@
       <div class="terms"><?php print $terms; ?></div>
     <?php endif; ?>
   </div>
+  <?php endif; ?>
   <div class="clearfix">
     
     <?php print render($content['comments']); ?>
