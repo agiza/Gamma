@@ -10,6 +10,10 @@ h2.node-title,
   margin-bottom: 10px;
 }
 
+.site-title {
+  padding-top: 15px;
+}
+
 .node h2 a:hover {
   color: #165d8f;
 }
@@ -638,6 +642,13 @@ div.links ul.links li a {
 
 
 /** Node Lists */
+.node .content ul {
+  margin: 0;
+  padding: 0;
+}
+.node .content ul ul {
+  padding-left: 16px;
+}
 .node .content ul li {
   background-image: url('../i/bullet-454545.png');
 }
