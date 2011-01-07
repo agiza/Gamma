@@ -1,4 +1,4 @@
-// $Id: $.js,v 1.1.2.3 2010/09/11 15:23:25 himerus Exp $
+// $Id: gamma.js,v 1.1 2011/01/07 16:10:59 himerus Exp $.js,v 1.1.2.3 2010/09/11 15:23:25 himerus Exp $
 
 (function ($) {
   /**
