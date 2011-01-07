@@ -649,9 +649,6 @@ div.links ul.links li a {
   margin: 0;
   padding: 0;
 }
-.node .content ul ul {
-  padding-left: 16px;
-}
 .node .content ul li {
   background-image: url('../i/bullet-454545.png');
 }
