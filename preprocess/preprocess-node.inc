@@ -9,13 +9,12 @@
 /**
  * @todo - make this term manipulation a setting in node display specific theme settings.
  */
+$term_fields = ''; 
 foreach ($vars['content'] AS $item) {
   if (isset($item['#field_type'])) {
-    $term_fields = '';
     if ($item['#field_type'] == 'taxonomy_term_reference') {
-      //krumo($item);
       $field_name = $item['#field_name'];
-      // $term_fields will hold the HTML data from any term_reference field, and be rendered separately in node.tpl.php
+      // $term_fields will hold the HTML data from any term_reference field, and will be rendered separately in node.tpl.php
       $term_fields .= render($item);
       // hide this "term" element from rendering in $content
       hide($vars['content'][$field_name]);

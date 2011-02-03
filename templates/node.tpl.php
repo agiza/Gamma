@@ -100,10 +100,10 @@
   <?php if($user_picture || $display_submitted || $terms): ?>
   <div class="clearfix node-info">
     <?php print $user_picture; ?>
-    <?php if ($display_submitted):?>
+    <?php if (isset($display_submitted)):?>
     <div class="submitted"><?php print $submitted; ?></div>
     <?php endif; ?>
-    <?php if (!empty($terms)): ?>
+    <?php if (isset($terms)): ?>
       <div class="terms"><?php print $terms; ?></div>
     <?php endif; ?>
   </div>
