@@ -7,8 +7,8 @@
  */
 ?>
 <div id="page" class="clearfix">
-  <?php if (isset($zones_above)): ?>
-  <div id="zones-above" class="clearfix"><?php print $zones_above; ?></div>
+  <?php if (isset($page['zones_above'])): ?>
+  <div id="zones-above" class="clearfix"><?php print render($page['zones_above']); ?></div>
   <?php endif; ?>
   
   <div id="zones-content">
@@ -21,12 +21,14 @@
           </div>
         </div><!-- /.container-xx -->
         <?php endif; ?>
-        <?php print $content_zone; ?>
+        <?php if (isset($page['content_zone'])): ?>
+          <?php print render($page['content_zone']); ?>
+        <?php endif; ?>
       </div>
     </div>
   </div>
   
-  <?php if (isset($zones_below)): ?>
-  <div id="zones-below" class="clearfix"><?php print $zones_below; ?></div>
+  <?php if (isset($page['zones_below'])): ?>
+  <div id="zones-below" class="clearfix"><?php print render($page['zones_below']); ?></div>
   <?php endif; ?>
 </div><!-- /#page -->
