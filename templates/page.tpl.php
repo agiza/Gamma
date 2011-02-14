@@ -7,11 +7,11 @@
  */
 ?>
 <div id="page" class="clearfix">
-  <?php if (isset($zones_above)): ?>
-  <div id="zones-above" class="clearfix"><?php print $zones_above; ?></div>
+  <?php if (isset($page['zones_above'])): ?>
+    <header id="zones-above" class="clearfix"><?php print render($page['zones_above']); ?></header>
   <?php endif; ?>
   
-  <div id="zones-content">
+  <section id="zones-content">
     <div id="zones-content-inner" class="clearfix">
       <div id="zones-content-background" class="clearfix">
         <?php if (isset($messages)): ?>
@@ -21,12 +21,14 @@
           </div>
         </div><!-- /.container-xx -->
         <?php endif; ?>
-        <?php print $content_zone; ?>
+        <?php if (isset($page['content_zone'])): ?>
+          <?php print render($page['content_zone']); ?>
+        <?php endif; ?>
       </div>
     </div>
-  </div>
+  </section>
   
-  <?php if (isset($zones_below)): ?>
-  <div id="zones-below" class="clearfix"><?php print $zones_below; ?></div>
+  <?php if (isset($page['zones_below'])): ?>
+    <footer id="zones-below" class="clearfix"><?php print render($page['zones_below']); ?></footer>
   <?php endif; ?>
 </div><!-- /#page -->
