@@ -1,5 +1,4 @@
 <?php
-// $Id: page.tpl.php,v 1.1 2011/01/07 16:10:59 himerus Exp $
 
 /**
  * @file
@@ -8,10 +7,10 @@
 ?>
 <div id="page" class="clearfix">
   <?php if (isset($page['zones_above'])): ?>
-  <div id="zones-above" class="clearfix"><?php print render($page['zones_above']); ?></div>
+  <header id="zones-above" class="clearfix"><?php print render($page['zones_above']); ?></header>
   <?php endif; ?>
   
-  <div id="zones-content">
+  <section id="zones-content">
     <div id="zones-content-inner" class="clearfix">
       <div id="zones-content-background" class="clearfix">
         <?php if (isset($messages)): ?>
@@ -26,9 +25,9 @@
         <?php endif; ?>
       </div>
     </div>
-  </div>
+  </section>
   
   <?php if (isset($page['zones_below'])): ?>
-  <div id="zones-below" class="clearfix"><?php print render($page['zones_below']); ?></div>
+  <footer id="zones-below" class="clearfix"><?php print render($page['zones_below']); ?></footer>
   <?php endif; ?>
 </div><!-- /#page -->
