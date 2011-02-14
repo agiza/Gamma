@@ -1,5 +1,5 @@
 <?php
-// $Id: node.tpl.php,v 1.1 2011/01/07 16:10:59 himerus Exp $
+// $Id: node.tpl.php,v 1.3 2011/02/14 00:32:25 himerus Exp $
 
 /**
  * @file
@@ -35,10 +35,10 @@
   <?php if($user_picture || $display_submitted || $terms): ?>
   <footer class="clearfix node-info">
     <?php print $user_picture; ?>
-    <?php if ($display_submitted):?>
+    <?php if (isset($display_submitted)):?>
     <div class="submitted"><?php print $submitted; ?></div>
     <?php endif; ?>
-    <?php if (!empty($terms)): ?>
+    <?php if (isset($terms)): ?>
       <div class="terms"><?php print $terms; ?></div>
     <?php endif; ?>
   </footer>
