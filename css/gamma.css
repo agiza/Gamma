@@ -12,6 +12,7 @@ h2.node-title,
 
 .site-title {
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .node h2 a:hover {
@@ -119,8 +120,7 @@ fieldset {
 
 
 #zones-content-background {
-  width: 95%;
-  margin: 0 auto;
+  margin: 0 10px;
   padding: 10px 10px;
   background: #EEE;
   border-radius: 0 0 15px 15px;
@@ -149,12 +149,12 @@ fieldset {
 /* Primary Navigation & Dropdowns #################################################### */
 
 #region-menu {
-  background: none;
-  float: right;
-  width: 95%;
-  margin: 0 auto;
-  min-height: 36px;
-  position: relative;
+  margin: 0 5px;
+  min-height: 44px;
+  background: #545454;
+  border-radius: 15px 15px 0 0;
+  -moz-border-radius: 15px 15px 0 0;
+  -webkit-border-radius: 15px 15px 0 0;
 }
 #region-menu ul.main-menu {
   font-family: 'Adobe Garamond Pro', Georgia, 'Times New Roman', serif;
@@ -756,41 +756,27 @@ blockquote {
 
 
 /* media query styles */
-@media all and (max-width: 979px) and (min-width: 740px) and (min-device-width: 740px) {
-  #zones-content-background,
-  #region-menu {
-    width: 720px;
-    padding: 0;
-  }
+
+/* hide logo for default mobile view */
+.logo-img {
+  display: none;
 }
 
-@media all and (max-width: 1219px) and (min-width: 980px) and (min-device-width: 980px), (max-device-width: 1024px) and (orientation:landscape) {
-  #zones-content-background,
-  #region-menu {
-    width: 960px;
-    padding: 0;
-  }
-}
 
-@media all and (min-width: 1220px) and (min-device-width: 1220px) {
-  #zones-content-background,
-  #region-menu {
-    width: 1200px;
-    padding: 0;
-  }
-}
 
 /* Anything over mobile sizing */
 @media all and (min-width: 740px) and (min-device-width: 740px) {
-  #region-branding .site-slogan {
+  /* show logo and slogan again */
+  #region-branding .site-slogan,
+  .logo-img {
     display: block;
+  }
+  .site-title {
+    padding-bottom: 0;
   }
   #region-menu {
     float: left;
-    background: #545454;
-    border-radius: 15px 15px 0 0;
-    -moz-border-radius: 15px 15px 0 0;
-    -webkit-border-radius: 15px 15px 0 0;
+    margin: 0;
   }
   #region-menu ul.main-menu li {
     margin-left: 1px;
@@ -800,5 +786,6 @@ blockquote {
   }
   #zones-content-background {
     padding: 10px 0;
+    margin: 0 auto;
   }
 }

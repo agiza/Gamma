@@ -1,0 +1,6 @@
+@media all and (min-width: 1220px) and (min-device-width: 1220px) {
+  #zones-content-background,
+  #region-menu {
+    width: 1200px;
+  }
+}
