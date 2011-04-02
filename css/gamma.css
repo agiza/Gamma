@@ -761,13 +761,13 @@ blockquote {
 .logo-img {
   display: none;
 }
-#user-container #block-user-login form {
-  display: none;
+#user-container #block-user-login .content {
+  visibility: hidden;
 }
 
 
 /* Anything over mobile sizing */
-@media all and (min-width: 740px) and (min-device-width: 740px) {
+@media all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape) {
   /* show logo and slogan again */
   #region-branding .site-slogan,
   .logo-img {
