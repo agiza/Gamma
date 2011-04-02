@@ -3,4 +3,7 @@
   #region-menu {
     width: 960px;
   }
+  #user-container #block-user-login form {
+    display: block;
+  }
 }

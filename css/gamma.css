@@ -150,7 +150,7 @@ fieldset {
 
 #region-menu {
   margin: 0 5px;
-  min-height: 44px;
+  min-height: 38px;
   background: #545454;
   border-radius: 15px 15px 0 0;
   -moz-border-radius: 15px 15px 0 0;
@@ -164,12 +164,12 @@ fieldset {
 }
 #region-menu ul.main-menu li {
   margin-left: 1px;
-  font-size: 16px;
+  font-size: 12px;
   padding: 0;
   position: relative;
 }
 #region-menu ul.main-menu li a {
-  padding: 10px 15px;
+  padding: 10px 5px;
   background-color: #8D8C8C;
   color: #EEE;
   border: 0;
@@ -761,7 +761,9 @@ blockquote {
 .logo-img {
   display: none;
 }
-
+#user-container #block-user-login form {
+  display: none;
+}
 
 
 /* Anything over mobile sizing */
@@ -783,6 +785,10 @@ blockquote {
     font-size: 24px;
     padding: 0;
     position: relative;
+  }
+  #region-menu ul.main-menu li a {
+    padding: 10px 15px;
+
   }
   #zones-content-background {
     padding: 10px 0;
